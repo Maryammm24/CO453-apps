@@ -1,4 +1,7 @@
-﻿using ConsoleAppProject.App03;
+﻿using ConsoleAppProject.App01;
+using ConsoleAppProject.App02;
+using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using ConsoleAppProject.Helpers;
 using System;
 
@@ -16,10 +19,51 @@ namespace ConsoleAppProject
     {
         public static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.Blue;
-            
-            Console.WriteLine("Byu CO453 Applications Programming 2021-2022!");
+            Console.WriteLine("BNU CO453 Applications Programming");
+            Console.WriteLine("Maryam Hanif");
             Console.WriteLine();
+            Menu();
         }
+
+        public static void Menu()
+        {
+            Console.WriteLine("Select the Program you would like to run:");
+            Console.WriteLine();
+            Console.WriteLine("1. App01: Distance Converter");
+            Console.WriteLine("2. App02: BMI Calculator");
+            Console.WriteLine("3. App03: Student Marks");
+            Console.WriteLine("4. App04: Social Network");
+            Console.WriteLine("5. App05: RPS Game");
+            Console.WriteLine();
+            Console.WriteLine("Enter the Program Number: ");
+            Console.WriteLine();
+            string Choice = Console.ReadLine();
+
+            switch (Choice)
+            {
+                case "1":
+                    Console.WriteLine("You have selected Distance converter");
+                    DistanceConverter2 converter = new DistanceConverter2();
+                    converter.ConvertDistance();
+                    break;
+                case "2":
+                    Console.WriteLine("You have selected Distance converter");
+                    BMI calculator = new BMI();
+                    ///calculator.Run();
+                    break;
+                case "3":
+                    Console.WriteLine("You have selected Distance converter");
+                    StudentGrades grades = new StudentGrades();
+                    ///grades.Run();
+                    break;
+                case "4":
+                    Console.WriteLine("You have selected Distance converter");
+                    NewsFeed feed  = new NewsFeed();
+                    ///feed.Run();
+                    break;
+                
+            }
+        }
+
     }
 }
