@@ -8,5 +8,6 @@
     /// </author>
     public class BMI
     {
+
     }
 }

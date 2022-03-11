@@ -11,11 +11,12 @@ namespace ConsoleAppProject.App01
         //From/to distance variables
         private double fromDistance;
         private double toDistance;
+        public double value;
 
         //fromUnit and toUnit 
         private DistanceUnits fromUnit;
         private DistanceUnits toUnit;
-
+        
         public DistanceConverter2()
         {
             fromUnit = DistanceUnits.Miles;
@@ -98,10 +99,32 @@ namespace ConsoleAppProject.App01
 
         private double InputDistance(string prompt)
         {
-            Console.Write(prompt);
-            string value = Console.ReadLine();
+            Boolean finish = false;
+            
+            do
+            {
+                try
+                {
+                    Console.Write(prompt);
+                    value = double.Parse(Console.ReadLine());
+                    if (value <= 0)
+                    {
+                        Console.WriteLine("Value must be more than 0.0");
+                        finish = false;
+                    }
+                    else
+                    {
+                        finish = true;
+                    }
+                }
+                catch
+                {
+                    Console.Write("Error");
+                }
+            }
+            while (finish == true);
 
-            return Convert.ToDouble(value);
+            return value;
         }
 
         private void CalculateDistance()
