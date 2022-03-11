@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace ConsoleAppProject.Helpers
 {
@@ -30,7 +32,7 @@ namespace ConsoleAppProject.Helpers
 
             // Get the user's choice
 
-            int choiceNo = (int)InputNumber("\n Please enter your choice > ", 
+            int choiceNo = (int)InputNumber("\n Please enter your choice > ",
                                             1, choices.Length);
             return choiceNo;
         }
@@ -93,8 +95,9 @@ namespace ConsoleAppProject.Helpers
         /// </summary>
         public static double InputNumber(string prompt, double min, double max)
         {
+
+            double number = 0;
             bool isValid;
-            double number;
 
             do
             {
@@ -125,7 +128,7 @@ namespace ConsoleAppProject.Helpers
 
             Console.WriteLine("\n ---------------------------------");
             Console.WriteLine($"    {heading}          ");
-            Console.WriteLine("     by Derek Peacock           ");
+            Console.WriteLine("     by Maryam Hanif           ");
             Console.WriteLine(" ---------------------------------" +
                 "\n");
 
@@ -143,7 +146,7 @@ namespace ConsoleAppProject.Helpers
             Console.WriteLine($"\n {title}");
             Console.Write(" ");
 
-            for(int count = 0; count <= title.Length; count++)
+            for (int count = 0; count <= title.Length; count++)
             {
                 Console.Write("-");
             }
