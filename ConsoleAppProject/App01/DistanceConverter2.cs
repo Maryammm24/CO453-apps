@@ -122,7 +122,7 @@ namespace ConsoleAppProject.App01
                     Console.Write("Error");
                 }
             }
-            while (finish == true);
+            while (finish == false);
 
             return value;
         }
