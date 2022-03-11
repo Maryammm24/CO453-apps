@@ -43,7 +43,7 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine();
             Console.WriteLine("\n-----------------------------------");
-            Console.WriteLine("       Convert Miles to Feet       ");
+            Console.WriteLine("         Distance Converter         ");
             Console.WriteLine("          by Maryam Hanif          ");
             Console.WriteLine("-----------------------------------\n");
         }
