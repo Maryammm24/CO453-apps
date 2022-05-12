@@ -49,17 +49,17 @@ namespace ConsoleAppProject
                 case "2":
                     Console.WriteLine("You have selected Distance converter");
                     BMI calculator = new BMI();
-                    ///calculator.Run();
+                    calculator.ConvertBmi();
                     break;
                 case "3":
                     Console.WriteLine("You have selected Distance converter");
                     StudentGrades grades = new StudentGrades();
-                    ///grades.Run();
+                    grades.StudentMenu();
                     break;
                 case "4":
                     Console.WriteLine("You have selected Distance converter");
                     NewsFeed feed  = new NewsFeed();
-                    ///feed.Run();
+                    //feed.DisplayMenu();
                     break;
                 
             }
